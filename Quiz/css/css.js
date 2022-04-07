@@ -1,12 +1,10 @@
 "use strict";
 
-
-
 let cssquestions = [
     {
     numb: 1,
     question: "What does CSS stands for ?",
-    answer: "Cascading style sheets",
+    answer: 3,
     options: [
       "Cascade style sheets",
       "Color and style sheets",
@@ -17,7 +15,7 @@ let cssquestions = [
     {
     numb: 2,
     question: " The HTML attribute used to define the inline styles is ?",
-    answer: "style",
+    answer: 1,
     options: [
       "style",
       "styles",
@@ -28,7 +26,7 @@ let cssquestions = [
     {
     numb: 3,
     question: "Which of the following CSS property is used to set the background image of an element?",
-    answer: "background-image",
+    answer: 2,
     options: [
       "background-attachment",
       "background-image",
@@ -39,7 +37,7 @@ let cssquestions = [
     {
     numb: 4,
     question: "Which of the following is the correct syntax to display the hyperlinks without any underline?",
-    answer: "a {text-decoration : none;}",
+    answer: 3,
     options: [
       "a {text-decoration : underline;}",
       "a {decoration : no-underline;}",
@@ -50,7 +48,7 @@ let cssquestions = [
     {
     numb: 5,
     question: " How to select the elements with the class name 'example'?",
-    answer: ".example",
+    answer: 3,
     options: [
       "example",
       "#example",
@@ -62,20 +60,6 @@ let cssquestions = [
 
  
 
-  var min = 120;
-    
-var time = setInterval(function() {
-  var minutes = parseInt((min % (60 * 60)) / (60));
-  var seconds = parseInt(min % (60));
-  document.getElementById("timer").innerHTML = minutes + ":" + seconds ;
-  if (min < 0) {
-    clearInterval(timer);
-    window.location="../HTML/show.html"
-    
-  }
-  min =  min - 1;
-  // console.log(min);
-}, 1000);
 
 
 
@@ -101,7 +85,6 @@ function startquiz(){
   
     
   }
-  console.log(cssquestions[0]);
   
   function quebody( x ){
    document.getElementById("queque").innerHTML= x.question;
@@ -130,7 +113,7 @@ function startquiz(){
   function nextQue(){
       if (i==cssquestions.length-1){
           document.getElementById("next").innerHTML="Submit";
-        //   window.location=""
+        //   window.location="../HTML/show.html"
       }
 
       else{
@@ -140,18 +123,7 @@ function startquiz(){
       }
   
   }
-/////////////////////////////////////////////
-//   let counter=0;
-
-//   function click(x){
-//       if (x==cssquestions[i].answer){
-
-//         document.getElementById("msg").innerHTML="message";
-//         counter++;
-        
-//       }
-//       nextQue();
-//   }
+                                               
 
 //////////////////////////////////////////////
 let useranswer=[];
@@ -160,21 +132,51 @@ let correctanswer=[];
 let choose=0;
 function choose1(){
     choose=1;
+    if(choose==cssquestions[i].answer)
+    { label1.style.background="green"
+        // alert("correct");
+    } else{
+        // alert("incorrect");
+        label1.style.background="red"
+    }
+
 
 }
 
 function choose2(){
     choose=2;
-
+    if(choose==cssquestions[i].answer)
+    {label2.style.background="green"
+        // alert("correct");
+    } else{
+        // alert("incorrect");
+        label2.style.background="red"
+    }
 }
 
 function choose3(){
     choose=3;
+    if(choose==cssquestions[i].answer)
+    {
+        // alert("correct");
+        label3.style.background="green"
+    } else{
+        // alert("incorrect");
+        label3.style.background="red"
+    }
 
 }
 
 function choose4(){
     choose=4;
+    if(choose==cssquestions[i].answer)
+    {
+        // alert("correct");
+        label4.style.background="green"
+    } else{
+        // alert("incorrect");
+        label4.style.background="red"
+    }
 
 }
 
@@ -187,12 +189,29 @@ function choose4(){
         quebody(cssquestions[0]);
         nextQue();
     }
-
  }
 
+/////////////////////////////////////////////////// timer
+
+// var min =18000;
+    
+// var time = setInterval(function() {
+//   var minutes = parseInt((min % (60 * 60)) / (60));
+//   var seconds = parseInt(min % (60));
+//   document.getElementById("timer").innerHTML = minutes + ":" + seconds ;
+//   if (min < 0) {
+//     clearInterval(timer);
+//     window.location="../HTML/show.html"
+//   }
+//   min =  min - 1;
+// }, 1000);
 
 
+////////////////////////////////////////////// local 
 
+function ansStorage(){
+
+}
 
 
 

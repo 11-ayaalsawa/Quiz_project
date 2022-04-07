@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        label{border:2px solid #000}
+    </style>
 </head>
 
 <body>
@@ -14,14 +18,14 @@
         <div id="queque"></div>
         <div id="options">
 
-            <input type="radio" id="option1" name="fav_language" onclick="choose1()">
-            <label for="html" id="label1"></label><br>
-            <input type="radio" id="option2" name="fav_language" onclick="choose2()">
-            <label for="css" id="label2"></label><br>
-            <input type="radio" id="option3" name="fav_language" onclick="choose3()">
-            <label for="javascript" id="label3"></label>
-            <input type="radio" id="option4" name="fav_language" onclick="choose4()">
-            <label for="javascript" id="label4"></label>
+            <!-- <input type="radio" id="option1" name="fav_language" > -->
+            <label for="html" id="label1" onclick="choose1()"></label><br><br> 
+            <!-- <input type="radio" id="option2" name="fav_language"> -->
+            <label for="css" id="label2" onclick="choose2()" ></label><br>  <br>
+            <!-- <input type="radio" id="option3" name="fav_language" > -->
+            <label for="javascript" id="label3" onclick="choose3()"></label>  <br><br>
+            <!-- <input type="radio" id="option4" name="fav_language" > -->
+            <label for="javascript" id="label4" onclick="choose4()"></label>
         </div>
         <div>
             <button onclick="next()" id="next"> Next </button>
