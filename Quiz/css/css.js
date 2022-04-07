@@ -1,9 +1,11 @@
 "use strict";
 
+
+
 let cssquestions = [
     {
     numb: 1,
-    question1: "What does CSS stands for ?",
+    question: "What does CSS stands for ?",
     answer: "Cascading style sheets",
     options: [
       "Cascade style sheets",
@@ -14,7 +16,7 @@ let cssquestions = [
   },
     {
     numb: 2,
-    question1: " The HTML attribute used to define the inline styles is ?",
+    question: " The HTML attribute used to define the inline styles is ?",
     answer: "style",
     options: [
       "style",
@@ -25,7 +27,7 @@ let cssquestions = [
   },
     {
     numb: 3,
-    question1: "Which of the following CSS property is used to set the background image of an element?",
+    question: "Which of the following CSS property is used to set the background image of an element?",
     answer: "background-image",
     options: [
       "background-attachment",
@@ -36,7 +38,7 @@ let cssquestions = [
   },
     {
     numb: 4,
-    question1: "Which of the following is the correct syntax to display the hyperlinks without any underline?",
+    question: "Which of the following is the correct syntax to display the hyperlinks without any underline?",
     answer: "a {text-decoration : none;}",
     options: [
       "a {text-decoration : underline;}",
@@ -47,7 +49,7 @@ let cssquestions = [
   },
     {
     numb: 5,
-    question1: " How to select the elements with the class name 'example'?",
+    question: " How to select the elements with the class name 'example'?",
     answer: ".example",
     options: [
       "example",
@@ -91,19 +93,22 @@ var time = setInterval(function() {
 
 // }
 
-let x=[];
+
+////////////////////////////////////////////////////////
+
 function startquiz(){
     quebody( cssquestions[0] )
   
     
   }
+  console.log(cssquestions[0]);
   
   function quebody( x ){
-    document.getElementById("queque").innerHTML= x.question1;
-    document.getElementById("label1").innerHTML= x. options[0];
-    document.getElementById("label2").innerHTML= x. options[1];
-    document.getElementById("label3").innerHTML= x. options[2];
-    document.getElementById("label4").innerHTML= x. options[3];
+   document.getElementById("queque").innerHTML= x.question;
+   document.getElementById("label1").innerHTML= x.options[0];
+   document.getElementById("label2").innerHTML= x.options[1];
+   document.getElementById("label3").innerHTML= x.options[2];
+   document.getElementById("label4").innerHTML= x.options[3];
   
   }
   /////////////////////////////////////////////////////////
@@ -120,6 +125,7 @@ function startquiz(){
 
 //////////////////////////////////////////////////////////
   startquiz()
+  ///////////////////////////////////////////////////
   let i=0;
   function nextQue(){
       if (i==cssquestions.length-1){
@@ -132,23 +138,20 @@ function startquiz(){
           quebody(cssquestions[i]);
 
       }
-
-      
-
+  
   }
+/////////////////////////////////////////////
+//   let counter=0;
 
-  let counter=0;
+//   function click(x){
+//       if (x==cssquestions[i].answer){
 
-  function click(x){
-      if (x==cssquestions[i].answer){
-
-        document.getElementById("msg").innerHTML="message";
-        counter++;
-        nextQue();
-      }
-  }
-
-
+//         document.getElementById("msg").innerHTML="message";
+//         counter++;
+        
+//       }
+//       nextQue();
+//   }
 
 //////////////////////////////////////////////
 let useranswer=[];
@@ -176,11 +179,14 @@ function choose4(){
 }
 
 
+/////////////////////////////////////////////////////
 
  function next(){
 
-    quebody();
-    nextQue();
+    if(choose>0){
+        quebody(cssquestions[0]);
+        nextQue();
+    }
 
  }
 
