@@ -17,6 +17,14 @@ let info=[];
 
 /////////////////////////////////////////////////////
 
+function storageform(){
+
+    let Jform = JSON.stringify(info);
+    localStorage.setItem("Data",Jform);
+
+}
+
+
 
 
 
@@ -46,7 +54,7 @@ function regform( fname,lname,email,pasw,conpasw,Position){
     this.checkPassword=checkPassword(pasw,conpasw);
 
     info.push(fname,lname,email,pasw,conpasw,Position);
-    
+    storageform();
     console.log(regform);
 }
 
@@ -143,7 +151,7 @@ function checkPassword(pasw,conpasw){
         console.log('Your registration is Complete ');  
         // ps2Msg.textContent= `Your registration is Complete`;
         alert(`Your registration is Complete`);
-        window.location = "../pages/login.html"
+        window.location = "../Login/index.html"
     }else{
         passcon.textContent= `Passwords don't match`;
     }
