@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        label{border:2px solid #000}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="timer"></div>
+        <div id="queque"></div>
+        <div id="options">
+
+            <input type="radio" id="option1" name="fav_language" >
+            <label for="option1" id="label1" ></label><br><br> 
+            <input type="radio" id="option2" name="fav_language">
+            <label for="option2" id="label2"  ></label><br>  <br>
+            <input type="radio" id="option3" name="fav_language" >
+            <label for="option3" id="label3" ></label>  <br><br>
+            <input type="radio" id="option4" name="fav_language" >
+            <label for="option4" id="label4" ></label>
+        </div>
+        <div>
+            <button onclick="next()" id="next" disabled> Next </button>
+
+            <span id="msg"></span>
+        </div>
+    </div>
+</body>
+
+<script src="./js.js"></script>
+
+</html>
