@@ -1,10 +1,18 @@
 "use strict";
 
+let item= [document.getElementById("label1"),document.getElementById("label2"),document.getElementById("label3"),document.getElementById("label4")];
+
+let item2=[document.getElementById("option1"),document.getElementById("option2"),document.getElementById("option3"),document.getElementById("option4")];
+
+let useranswer=[];
+
+
+
 let cssquestions = [
     {
     numb: 1,
     question: "What does CSS stands for ?",
-    answer: 3,
+    answer: "Cascading style sheets",
     options: [
       "Cascade style sheets",
       "Color and style sheets",
@@ -15,7 +23,7 @@ let cssquestions = [
     {
     numb: 2,
     question: " The HTML attribute used to define the inline styles is ?",
-    answer: 1,
+    answer:  "style",
     options: [
       "style",
       "styles",
@@ -26,7 +34,7 @@ let cssquestions = [
     {
     numb: 3,
     question: "Which of the following CSS property is used to set the background image of an element?",
-    answer: 2,
+    answer: "background-image",
     options: [
       "background-attachment",
       "background-image",
@@ -37,7 +45,7 @@ let cssquestions = [
     {
     numb: 4,
     question: "Which of the following is the correct syntax to display the hyperlinks without any underline?",
-    answer: 3,
+    answer:  " a {text-decoration : none;}",
     options: [
       "a {text-decoration : underline;}",
       "a {decoration : no-underline;}",
@@ -48,7 +56,7 @@ let cssquestions = [
     {
     numb: 5,
     question: " How to select the elements with the class name 'example'?",
-    answer: 3,
+    answer:".example",
     options: [
       "example",
       "#example",
@@ -58,26 +66,7 @@ let cssquestions = [
   }];
 
 
- 
-
-
-
-
-
-////////////////////////////////////////////////
-// let x=[];
-// function showQue(x){
-
-
-//     que.innerHTML=x.question;
-// let label1=document.getElementById("label1").innerHTML=x.options[0];
-// let label2=document.getElementById("label2").innerHTML=x.options[1];
-// let label3=document.getElementById("label3").innerHTML=x.options[2];
-// let label4=document.getElementById("label4").innerHTML=x.options[3];
-
-// }
-
-
+ // let correctanswer=[ "Cascading style sheets", "style", "background-image", " a {text-decoration : none;}", ".example"];
 ////////////////////////////////////////////////////////
 
 function startquiz(){
@@ -94,26 +83,17 @@ function startquiz(){
    document.getElementById("label4").innerHTML= x.options[3];
   
   }
-  /////////////////////////////////////////////////////////
-//   let counter=0;
 
-//   function click(x){
-//       if (x==cssquestions[i].answer){
 
-//         document.getElementById("msg").innerHTML="message";
-//         counter++;
-//         nextQue();
-//       }
-//   }
 
-//////////////////////////////////////////////////////////
   startquiz()
   ///////////////////////////////////////////////////
   let i=0;
   function nextQue(){
       if (i==cssquestions.length-1){
+  
           document.getElementById("next").innerHTML="Submit";
-        //   window.location="../HTML/show.html"
+          window.location="../../result/css/index.html"
       }
 
       else{
@@ -126,92 +106,93 @@ function startquiz(){
                                                
 
 //////////////////////////////////////////////
-let useranswer=[];
-let correctanswer=[];
-
+let userchoise;
 let choose=0;
-function choose1(){
-    choose=1;
-    if(choose==cssquestions[i].answer)
-    { label1.style.background="green"
-        // alert("correct");
-    } else{
-        // alert("incorrect");
-        label1.style.background="red"
-    }
+for(let i=0; i<item.length; i++){
+item[i].onclick=function(){
+document.getElementById("next").disabled = false;
+  userchoise=this.textContent;
+  // console.log(this.textContent);
+  choose=1;
+  // if(choose==cssquestions[i].answer)
+  // {
+  // //    label1.style.background="green"
+  // // label2.style.background=""
+  // // label3.style.background=""
+  // // label4.style.background=""
+  //     alert("correct");
+  // } else{
+  //     alert("incorrect");
+  //     // label1.style.background="red"
+  //     // label2.style.background=""
+  //     // label3.style.background=""
+  //     // label4.style.background=""
+  // }
 
 
 }
-
-function choose2(){
-    choose=2;
-    if(choose==cssquestions[i].answer)
-    {label2.style.background="green"
-        // alert("correct");
-    } else{
-        // alert("incorrect");
-        label2.style.background="red"
-    }
 }
 
-function choose3(){
-    choose=3;
-    if(choose==cssquestions[i].answer)
-    {
-        // alert("correct");
-        label3.style.background="green"
-    } else{
-        // alert("incorrect");
-        label3.style.background="red"
-    }
-
-}
-
-function choose4(){
-    choose=4;
-    if(choose==cssquestions[i].answer)
-    {
-        // alert("correct");
-        label4.style.background="green"
-    } else{
-        // alert("incorrect");
-        label4.style.background="red"
-    }
-
-}
-
-
+let correctanswer=[ "Cascading style sheets", "style", "background-image", " a {text-decoration : none;}", ".example"];
 /////////////////////////////////////////////////////
-
+let e=0;
  function next(){
+document.getElementById("next").disabled = true;
+
+  useranswer[e]=userchoise;
+  console.log(useranswer);
+
+  for(let i=0; i<item.length ;i++){
+    // item[i].checked=false;
+    item[i].style.backgroundColor="white";
+
+    item2[i].checked=false;
+  }
 
     if(choose>0){
         quebody(cssquestions[0]);
         nextQue();
     }
+
+    // console.log(this);
+    console.log(useranswer);
+    if(e<cssquestions.length){
+
+      ansStorage();
+    }
+    e++;
+    
  }
+
+
 
 /////////////////////////////////////////////////// timer
 
-// var min =18000;
+var min =10;
     
-// var time = setInterval(function() {
-//   var minutes = parseInt((min % (60 * 60)) / (60));
-//   var seconds = parseInt(min % (60));
-//   document.getElementById("timer").innerHTML = minutes + ":" + seconds ;
-//   if (min < 0) {
-//     clearInterval(timer);
-//     window.location="../HTML/show.html"
-//   }
-//   min =  min - 1;
-// }, 1000);
+var time = setInterval(function() {
+  var minutes = parseInt((min % (60 * 60)) / (60));
+  var seconds = parseInt(min % (60));
+  document.getElementById("timer").innerHTML = minutes + ":" + seconds ;
+  if (min < 0) {
+    clearInterval(timer);
+    
+    window.location="../../result/css/index.html"
+  }
+  min =  min - 1;
+}, 1000);
 
 
 ////////////////////////////////////////////// local 
 
 function ansStorage(){
 
+  let answerstorage = JSON.stringify(useranswer);
+  localStorage.setItem("Data",answerstorage);
+
+
 }
+
 
 
 
