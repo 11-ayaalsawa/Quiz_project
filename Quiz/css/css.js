@@ -168,7 +168,7 @@ document.getElementById("next").disabled = true;
 
 /////////////////////////////////////////////////// timer
 
-var min =10;
+var min =50;
     
 var time = setInterval(function() {
   var minutes = parseInt((min % (60 * 60)) / (60));
