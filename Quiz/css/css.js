@@ -168,19 +168,19 @@ document.getElementById("next").disabled = true;
 
 /////////////////////////////////////////////////// timer
 
-var min =50;
+// var min =50;
     
-var time = setInterval(function() {
-  var minutes = parseInt((min % (60 * 60)) / (60));
-  var seconds = parseInt(min % (60));
-  document.getElementById("timer").innerHTML = minutes + ":" + seconds ;
-  if (min < 0) {
-    clearInterval(timer);
+// var time = setInterval(function() {
+//   var minutes = parseInt((min % (60 * 60)) / (60));
+//   var seconds = parseInt(min % (60));
+//   document.getElementById("timer").innerHTML = minutes + ":" + seconds ;
+//   if (min < 0) {
+//     clearInterval(timer);
     
-    window.location="../../result/css/index.html"
-  }
-  min =  min - 1;
-}, 1000);
+//     window.location="../../result/css/index.html"
+//   }
+//   min =  min - 1;
+// }, 1000);
 
 
 ////////////////////////////////////////////// local 

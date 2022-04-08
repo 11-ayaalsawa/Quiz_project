@@ -1,0 +1,14 @@
+.d1{
+margin: 0%;
+box-sizing: border-box;
+position: absolute;
+top: 50%;
+}
+
+#footer{
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
