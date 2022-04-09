@@ -21,7 +21,12 @@ Group members:
 
 
 
-[live link ](https://obadaalshafeey.github.io/my-project-2/)
+[live link ](https://11-ayaalsawa.github.io/Quiz_project/)
+
+
+[Repo link ](https://github.com/11-ayaalsawa/Quiz_project)
+
+
 
 [github](https://github.com/11-ayaalsawa)
 
