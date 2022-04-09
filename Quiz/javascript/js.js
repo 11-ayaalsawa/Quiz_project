@@ -66,7 +66,6 @@ let jsquestions = [
   },]
 
 
- // let correctanswer=[ "Cascading style sheets", "style", "background-image", " a {text-decoration : none;}", ".example"];
 ////////////////////////////////////////////////////////
 
 function startquiz(){
@@ -168,18 +167,18 @@ document.getElementById("next").disabled = true;
 
 /////////////////////////////////////////////////// timer
 
-var min =1010;
-    
+var sec =120;
+   
 var time = setInterval(function() {
-  var minutes = parseInt((min % (60 * 60)) / (60));
-  var seconds = parseInt(min % (60));
+  var minutes = parseInt((sec % (60 * 60)) / (60));
+  var seconds = parseInt(sec % (60));
   document.getElementById("timer").innerHTML = minutes + ":" + seconds ;
-  if (min < 0) {
+  if (sec < 0) {
     clearInterval(timer);
     
-    window.location="../../result/js/index.html"
+    window.location="../../result/js/index.html";
   }
-  min =  min - 1;
+  sec =  sec - 1;
 }, 1000);
 
 
