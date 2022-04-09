@@ -25,11 +25,11 @@ function result(){
    score++;
    console.log("score is", score);
    if((score>2)){
-        title.innerHTML=`<h1>Congratulations!! You are Pass </h1><br><h2> ${score} / 5 Questions</h2> `; 
+        title.innerHTML=`<h1>Congratulations!! You Passed </h1><br><h2> ${score} / 5 Questions</h2> `; 
           title.style.color="green";
      }       
         else{
-            title.innerHTML=`<h1> Hard Luck You are Fail </h1><br><h2> ${score} / 5 Questions</h2>`;
+            title.innerHTML=`<h1> Hard Luck!! You Failed </h1><br><h2> ${score} / 5 Questions</h2>`;
             title.style.color="red";
         }
       
@@ -61,25 +61,25 @@ result();
 ///////////////////////////////////////////////////////////////////////////////////////////
 function show() {
     if(info5[0]==correctanswer[0]){
-        document.getElementById("qa1").style.backgroundColor="green";
+        document.getElementById("qa1").style.backgroundColor="#97DBAE";
     }else{
-        document.getElementById("qa1").style.backgroundColor="red";
+        document.getElementById("qa1").style.backgroundColor="#FC4F4F";
     }if(info5[1]==correctanswer[1]){
-        document.getElementById("qa2").style.backgroundColor="green";
+        document.getElementById("qa2").style.backgroundColor="#97DBAE";
     }else{
-        document.getElementById("qa2").style.backgroundColor="red";
+        document.getElementById("qa2").style.backgroundColor="#FC4F4F";
     } if(info5[2]==correctanswer[2]){
-        document.getElementById("qa3").style.backgroundColor="green";
+        document.getElementById("qa3").style.backgroundColor="#97DBAE";
     }else{
-        document.getElementById("qa3").style.backgroundColor="red";
+        document.getElementById("qa3").style.backgroundColor="#FC4F4F";
     } if(info5[3]==correctanswer[3]){
-        document.getElementById("qa4").style.backgroundColor="green";
+        document.getElementById("qa4").style.backgroundColor="#97DBAE";
     }else{
-        document.getElementById("qa4").style.backgroundColor="red";
+        document.getElementById("qa4").style.backgroundColor="#FC4F4F";
     } if(info5[4]==correctanswer[4]){
-        document.getElementById("qa5").style.backgroundColor="green";
+        document.getElementById("qa5").style.backgroundColor="#97DBAE";
     }else{
-        document.getElementById("qa5").style.backgroundColor="red";
+        document.getElementById("qa5").style.backgroundColor="#FC4F4F";
     }
 
 
