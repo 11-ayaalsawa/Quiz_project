@@ -19,7 +19,7 @@ let correctanswer=[ "Cascading style sheets", "style", "background-image", " a {
 let score=0;
 function result(){
 
-    for ( var i=0; i< correctanswer.length-1; i++){
+    for ( var i=0; i< correctanswer.length; i++){
         if(info5[i]==correctanswer[i]){ 
    score++;
    console.log("score is", score);

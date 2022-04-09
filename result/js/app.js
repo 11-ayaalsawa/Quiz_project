@@ -12,14 +12,14 @@ let jquestion=["Which type of JavaScript language is ___?",
 "The four basic data types are:",
 " What are the types of Pop up boxes available in JavaScript?",
  "Which of the following keywords is used to define a variable in Javascript?",
-" How do we write a comment in javascript?"
+" The 'function' and ' var' are known as:"
 ]
 
-let correctanswer=["Object-Based","strings, numbers, Booleans, and nulls",  "All of the above"," All of the above", "//"];
+let correctanswer=["Object-Based","strings, numbers, Booleans, and nulls",  "All of the above"," All of the above", "Declaration statements"];
 let score=0;
 function result(){
 
-    for ( var i=0; i< correctanswer.length-1; i++){
+    for ( var i=0; i< correctanswer.length; i++){
         if(info5[i]==correctanswer[i]){
         
    score++;

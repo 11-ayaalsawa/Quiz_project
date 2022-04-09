@@ -55,13 +55,13 @@ let jsquestions = [
   },
     {
     numb: 5,
-    question: " How do we write a comment in javascript?",
-    answer: "//",
+    question: "The 'function' and ' var' are known as: ",
+    answer: "Declaration statements",
     options: [
-      "/**/",
-      "//",
-      "#",
-      "$$"
+      "Keywords",
+      "Data types",
+      "Declaration statements",
+      "Prototypes"
     ]
   },]
 
@@ -92,7 +92,7 @@ function startquiz(){
       if (i==jsquestions.length-1){
   
           document.getElementById("next").innerHTML="Submit";
-          window.location="../../result/js/index.html"
+          window.location="../../result/js/index.html";
       }
 
       else{
@@ -132,7 +132,7 @@ document.getElementById("next").disabled = false;
 }
 }
 
-let correctanswer=["Object-Based","strings, numbers, Booleans, and nulls",  "All of the above"," All of the above", "//"];
+let correctanswer=["Object-Based","strings, numbers, Booleans, and nulls",  "All of the above"," All of the above", "Declaration statements"];
 /////////////////////////////////////////////////////
 let e=0;
  function next(){

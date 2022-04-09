@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://wallpaperaccess.com/full/250763.jpg");
+    background-color: #0bbbb55b  !important;
     font-family: monospace;
    
 }
@@ -41,13 +41,13 @@ body {
         background-size: cover;
         background-position: 50%;
         position: absolute;
-       top:16%;
+       top:17%;
        left:50%;
-       border-radius: 10px;
+       border-radius: 25px;
        border-top-left-radius:0 ;
        border-bottom-left-radius:0 ;
        width:25%;
-       height:64%;}
+       height:61%;}
 
        form i {
            margin-left: -20px;
@@ -75,10 +75,35 @@ body {
 
 
 
-#footer{
+ #footer{
     height: 30px;
     background-color: white;
     position: absolute;
     bottom: 0;
     width: 100%;
-}
+} 
+
+#footer{
+    height: 10px;
+    background-color: white;
+   
+    text-align: center;
+   
+  }
+  
+  #footer span {
+    position: absolute;
+    right: 40%;
+    
+  }
+  
+  #s1{
+  
+    bottom: 30px;
+  
+  }
+  #s2{
+  
+    bottom: 5px;
+  
+  }

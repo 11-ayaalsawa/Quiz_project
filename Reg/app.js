@@ -105,20 +105,17 @@ function ulname(lname){
     }}
 
 /////////////////////////////////////////////////////////
-
-
-function mailll(email){
-    let out3;
-    const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-//  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; // for email
-    if(re.test(email)){
-        console.log('correct @');
-        out3=email;
-        return out3;
-       }
-    else {
-        mailll.textContent="Invalid email given, missing @";
-    }}
+    function mailll(email){
+        let out3;
+     var filter = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/; // for email
+        if(filter.test(email)){
+            console.log('correct @');
+            out3=email;
+            return out3;
+           }
+        else {
+            mailll.textContent="Invalid email given, missing @";
+        }}
 
 ///////////////////////////////////////////////////////
 

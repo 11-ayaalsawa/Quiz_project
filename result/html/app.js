@@ -19,7 +19,7 @@ let correctanswer=[ "Hyper Text Markup Language", "H1", "1-6","Br", "Ol"];
 let score=0;
 function result(){
 
-    for ( var i=0; i< correctanswer.length-1; i++){
+    for ( var i=0; i< correctanswer.length; i++){
         if(info5[i]==correctanswer[i]){
         
    score++;
