@@ -94,6 +94,7 @@ function startquiz(){
   
           document.getElementById("next").innerHTML="Submit";
           window.location="../../result/css/index.html"
+          // document.getElementById("next").click.href="../../result/css/index.html";
       }
 
       else{
