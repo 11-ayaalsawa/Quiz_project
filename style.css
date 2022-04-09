@@ -133,3 +133,230 @@ h1{
   #footer span {
 padding-bottom: 20px;
   }
+
+
+  /* /////////////////////////////////////////////////// */
+  @media screen and (max-width:1024px){
+    *{
+      font-size: 5px;
+    }
+    #img{
+      position: absolute;
+      top: 13%;
+      right: 20%;
+    }
+    
+    .butonn{
+      position: absolute;
+      top:60%;
+      left: 90%;
+      
+    }
+    
+    .butonn2{
+      position: absolute;
+      top:60%;
+      left: 85%;
+    }
+    
+    .styleh1{
+      padding-top: 150%;
+      
+    }
+ .homebtn{
+      width: 30px;
+      height: 40px;
+      background-color: rgb(250, 238, 238);
+      border-radius: 8px;
+      color: black;
+      border: none;
+      margin-left: 25%;
+      margin-top: 10px;
+      position: absolute;
+      bottom: 20%;
+      right: 25%;
+      font-size: medium;
+    }
+
+
+
+
+@media screen and (max-width:768px) { 
+
+  *{
+    font-size: 5px;
+  }
+  #img{
+    position: absolute;
+    top: 13%;
+    right: 20%;
+  }
+  
+  .butonn{
+    position: absolute;
+    top:60%;
+    left: 90%;
+    
+  }
+  
+  .butonn2{
+    position: absolute;
+    top:60%;
+    left: 80%;
+  }
+  
+  .styleh1{
+    padding-top: 150%;
+    
+  }
+  
+  .homebtn{
+    width: 30px;
+    height: 40px;
+    background-color: rgb(250, 238, 238);
+    border-radius: 8px;
+    color: black;
+    border: none;
+    margin-left: 25%;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 20%;
+    right: 25%;
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width:640px) {
+  *{
+    font-size: 5px;
+  }
+  #img{
+    position: absolute;
+    top: 13%;
+    right: 20%;
+  }
+  
+  .butonn{
+    position: absolute;
+    top:60%;
+    left: 65%;
+    
+  }
+  
+  .butonn2{
+    position: absolute;
+    top:60%;
+    left: 50%;
+  }
+  
+  .styleh1{
+    padding-top: 150%;
+    
+  }
+  
+  .homebtn{
+    width: 30px;
+    height: 40px;
+    background-color: rgb(250, 238, 238);
+    border-radius: 8px;
+    color: black;
+    border: none;
+    margin-left: 25%;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 20%;
+    right: 25%;
+    font-size: medium;
+  }
+
+}}
+
+@media screen and (max-width:480px) { 
+  *{
+    font-size: 5px;
+  }
+  #img{
+    position: absolute;
+    top: 13%;
+    right: 20%;
+  }
+  
+  .butonn{
+    position: absolute;
+    top:60%;
+    left: 65%;
+    
+  }
+  
+  .butonn2{
+    position: absolute;
+    top:60%;
+    left: 50%;
+  }
+  
+  .styleh1{
+    padding-top: 150%;
+    
+  }
+  
+  .homebtn{
+    width: 30px;
+    height: 40px;
+    background-color: rgb(250, 238, 238);
+    border-radius: 8px;
+    color: black;
+    border: none;
+    margin-left: 25%;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 20%;
+    right: 25%;
+    font-size: medium;
+  }
+
+}
+/* /////////////// 320px  */
+@media screen and (max-width:320px) { 
+
+*{
+  font-size: 5px;
+}
+#img{
+  position: absolute;
+  top: 13%;
+  right: 20%;
+}
+
+.butonn{
+  position: absolute;
+  top:60%;
+  left: 65%;
+  
+}
+
+.butonn2{
+  position: absolute;
+  top:60%;
+  left: 50%;
+}
+
+.styleh1{
+  padding-top: 150%;
+  
+}
+
+.homebtn{
+  width: 30px;
+  height: 40px;
+  background-color: rgb(250, 238, 238);
+  border-radius: 8px;
+  color: black;
+  border: none;
+  margin-left: 25%;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 20%;
+  right: 25%;
+  font-size: medium;
+}
+}
